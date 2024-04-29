@@ -32,10 +32,11 @@ class Withdraw extends Controller
 
         //tax
 //        if($userinfo['mobile'] == '968968968'||$userinfo['mobile'] == '88889999'){
-            $usinfo = (new User())->where(['id'=>$userinfo['id']])->find();
-            if($usinfo['is_payment'] == 0){
-                $this->error("Lakukan pembayaran pajak terlebih dahulu");
-            }
+        //先注释 20240429
+//            $usinfo = (new User())->where(['id'=>$userinfo['id']])->find();
+//            if($usinfo['is_payment'] == 0){
+//                $this->error("Lakukan pembayaran pajak terlebih dahulu");
+//            }
 //        }
 
         $post = $this->request->post();
